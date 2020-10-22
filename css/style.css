@@ -17,6 +17,8 @@
 --black-text:#000000;
 --footer-text:#F3F7F9;
 --footer-service-text:#FFD180;
+--Success:#5FBB2D;
+--popular-background-catalog:#F2F6F8;
 }
 
 /*FONTS*/
@@ -110,6 +112,7 @@ body{
 a  {
 text-decoration: none;
 
+
 }
 
 img {
@@ -118,26 +121,176 @@ img {
 }
 
 .page {
+  height: 100%;
+
+}
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+
+
 }
 /*HEADER*/
 
 .main-header {
-  background-color: var(--background-opacity-white);
+  display: grid;
 }
-.forms {
+/*.forms {
+  display: ;
   background-color: var(--basic-background-dark-grey);
   color: var(--white);
+  font-family: "Cuprum", sans-serif;
+  width: 1200px;
+  height: auto;
+}
+.searching {
+  
+  font-family: "Cuprum", sans-serif;
+  
+}
+.form_bookmark {
+}
+.bookmark-text {
+}
+.form_cart {
+}
+.cart-text {
 }
 .order {
   background-color: var(--green);
   color: var(--white);
+  width: 150px;
+  height: 42px;
+  font-family: "Cuprum", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  border: 0px;
+}
+.order:hover {
+background-color: var(--Success);
+}
+.order:active {
+background-color: var(--green);
+color: rgba(255, 255, 255, 0.5);
+}*/
+
+.user-bar {
+  background-color: var(--basic-background-dark-grey);
+    width: 100%;
+}
+.conteiner {
+width: 940px;
+margin: 0 auto;
+padding: 0;
+
+}
+.user-bar-flex {
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+
+
+}
+
+.header-logo {
+background: var(--basic-red);
+width: 220px;
+height: 47px;
+text-align: center;
+box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+z-index: 1;
+
+
   
 }
-.logo {
+.logo-header {
+padding-top: 13px;
+border: none;
+
 }
+
+.search {
+background: url("img/icon-search.svg") no-repeat left center;
+width: 271px;
+
+  
+}
+.searching {
+  font-size: 18px;
+  line-height: 24px;
+  color:var(--white);
+  font-family: "Cuprum", sans-serif;
+  background-color: var(--basic-background-dark-grey);
+  margin-left: 20px;
+  box-shadow: none;
+  appearance: none;
+  outline: 0;
+  border: none;
+  opacity: none;
+
+}
+::-webkit-input-placeholder {color:var(--white);}
+::-moz-placeholder          {color:#c0392b;}/* Firefox 19+ */
+:-moz-placeholder           {color:#c0392b;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#c0392b;}
+
+.user-items {
+  display: flex;
+  align-items: center; 
+ 
+}
+
+.user-item {
+  text-align: center;
+  vertical-align: middle;
+  align-self: center;
+}
+.bookmark-img {
+  background: url(F:/1360323-technomart-29/img/icon-bookmark.svg) no-repeat left center;
+}
+.cart-img {
+background: url(F:/1360323-technomart-29/img/icon-cart.svg) no-repeat left center;
+
+}
+.user-button {
+outline: none;
+border: none;
+font-family: "Cuprum", sans-serif;
+background-color: var(--basic-background-dark-grey);
+color: var(--white);
+font-size: 18px;
+line-height: 24px;
+font-weight: normal;
+margin-left: 20px;
+}
+.user-link {
+  width: 150px;
+  height: 42px;
+  background-color: var(--green);
+  font-size: 18px;
+  line-height: 24px;
+  color:var(--white);
+  font-family: "Cuprum", sans-serif;
+  padding-top: 15px;
+}
+
+
 .description {
   background-color: var(--basic-background);
   color: var(--white);
+
+}
+.description-grid {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 46px;
+  padding-top: 0;
+  
+
 }
 .page-text {
   color: var(--basic-background-light-grey);
@@ -145,14 +298,31 @@ img {
 font-weight: normal;
 font-size: 14px;
 line-height: 24px;
+
+
 }
 .main-name {
   color: var(--basic-red);
   font-weight: normal;
 font-size: 16px;
 line-height: 23px;
+width: 210px;
+padding-left: 20px;
+margin: 0px;
+align-self: center;
+
 }
 .adress {
+  width:270px;
+  height: 45px;
+  margin: 20px;
+  text-align: right;
+  vertical-align: middle;
+  margin-right: 69px;
+  margin-left: 93px;
+
+  
+  
 }
 .telephone {
   color: var(--basic-red);
@@ -160,95 +330,175 @@ line-height: 23px;
 font-weight: bold;
 font-size: 21px;
 line-height: 30px;
+border: solid white 3px;
+padding: 7px 45px 8px 45px;
+background-image: url(F:/1360323-technomart-29/img/icon-phone.svg) no-repeat;
+
 }
 
 .exit {
+  color: var(--black-text);
+  font-size: 21px;
+  line-height: 21px;
+  width: 150px;
+  height: 45px;
+  font-family: "Cuprum", sans-serif;
+  border: none;
+  background: url(F:/1360323-technomart-29/img/icon-login.svg) no-repeat 20% center;
+  background-color: var(--white);
+  margin-right: 10px;
 }
 .registration {
+  color: var(--black-text);
+  font-size: 21px;
+  line-height: 21px;
+  background-color: var(--white);
+  width: 150px;
+  height: 45px;
+  font-family: "Cuprum", sans-serif;
+  border:none;
+  margin: 0;
 }
 
 /*NAVIGATION*/
 
 .main-nav {
   background-color: var(--basic-background);
+  height: auto;
+
+
   
 }
 
 .nav-list {
-background-color: var(--basic-background-dark-grey);
+background-color: var(--basic-background-light-grey);
+display: flex;
 list-style: none;
-width: 940px;
-margin-left: 130px;
-margin-right: 130px;
+height: 60px;
+text-align: center;
+align-content: center;
+box-shadow: inset 0px -5px 0px var(--basic-background-dark-grey);
+justify-content: space-between;
+align-items: center;
+padding-left: 53px;
+padding-right: 53px;
+margin-top: 40px;
 }
-.nav-item  {
+
+.nav-item a  {
   color: var(--white);
-  
+
 }
+.nav-item {
+padding: 0;
+margin: 0;
+
+}
+
 /*MAIN*/
 
 .page-main {
 background-color:var(--white);
 }
 .options {
+  width: 940px;
+  margin: 0 auto;
+
 }
 .hidden {
+  /*display: none;*/
+
 
 }
 .options-list {
   list-style: none;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-gap: 20px;
+  /*border: solid black 2px;*/
 }
 .option-item {
   width: 300px;
   height: 123px;
+
 }
-.option-item:nth-child(1),.option-item:nth-child(5) {
-background-color: var(--orange);
+.option-item:nth-child(1) {
+background: var(--orange) url(F:/1360323-technomart-29/img/icon-1.svg) no-repeat 80% 50%;
 }
 .option-item:nth-child(2) {
-background-color: var(--blue);
+background: var(--blue) url(F:/1360323-technomart-29/img/icon-2.svg) no-repeat 80% 50%;
 }
 .option-item:nth-child(3){
-background-color: var(--violet);
+background: var(--violet) url(F:/1360323-technomart-29/img/icon-3.svg) no-repeat 80% 50%;
 }
-.option-item:nth-child(4) {
-background-color: var(--light-green);
+.option-item:nth-child(4){
+border:dashed black 2px;
+grid-row: 2/4;
+grid-column: 1/3;
+width: 620px;
+height: 266px;
 
+}
+.option-item:nth-child(5) {
+background: var(--light-green) url(F:/1360323-technomart-29/img/icon-4.svg) no-repeat 80% 50%;
+grid-row: 2/2;
+grid-column: 3/3;
+}
+.option-item:nth-child(6) {
+background: var(--orange) url(F:/1360323-technomart-29/img/icon-5.svg) no-repeat 80% 50%;
+grid-row: 3/3;
+grid-column: 3/3;
 }
 .option-text {
   color: var(--white);
+  font-size: 24px;
+  line-height: 30px;
+
 }
 .option-button {
   background-color:var(--white);
   opacity: 0.3;
+  mix-blend-mode: normal;
   width: 135px;
   height: 38px;
-  mix-blend-mode: normal;
+  text-align: center;
+  padding-top: 10px;
+
+  
   
 }
-.option-button {
-  color: var(--white);
+.option-button a {
+  /*color: var(--white);*/
   font-style: normal;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
+  color: black;
+
+  
+
  
 }
-.option-button:hover {
+/*.option-button:hover {
 background-color: var(--greylight-hover);
 }
 .option-button:active {
   background-color: var(--grey-active);
 }
 .option-button-text {
-color:var(--white);
+color:var(--white);*/
 }
 /*SLIDER*/
 
 .slider {
   width: 622px ;
   height: 266px ;
+
+
 }
 .slider-text {
   width: 620px;
@@ -270,6 +520,7 @@ line-height: 24px;
 }
 /*POPULAR SECTION*/
 .all-button {
+ font-family: "Cuprum", sans-serif;
  width: 192px; 
  height: 38px;
  background-color: var(--basic-red);
@@ -277,21 +528,119 @@ line-height: 24px;
  font-size: 14px;
  line-height: 18px;
  color: var(--white);
+  box-shadow: none;
+  appearance: none;
+  outline: 0;
+  border: none;
+  opacity: none;
+
 }
 .popular-items {
 }
 .popular-text {
+display: flex;
 width: 940px;
 height: 89px;
 background-color: var(--popular-background);
+justify-content: space-between;
+align-items: center;
+padding: 0 9px 0px 28px;
+}
+
+
+/*CATALOG PAGE*/
+.page-catalog {
+display: grid;
+width: 940px;
+margin-left: auto;
+margin-right: auto;
+grid-template-columns: repeat(4, 220px); 
+grid-template-rows: auto auto auto;
+grid-gap: 20px;
+}
+.bread-crumb-list {
+list-style-image: url(F:/1360323-technomart-29/img/icon-right-small.svg);
+text-transform: uppercase;
+font-family: "PT Sans", sans-seif;
+font-size: 13px;
+line-height: 18px;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 0;
+width: 400px;
+height: 18px;
+border: dashed 1px black;
+}
+.bread-crumb-item {
+margin-right: 20px;
+}
+.bread-crumb-item:first-of-type {
+  list-style-type: none;
+}
+
+.catalog-text {
+background-color: var(--popular-background-catalog);
+padding: 0 9px 0px 28px;
+grid-column: 1/5;
 
 }
+.filter {
+grid-column: 1/1;
+grid-row: 3/7;
+
+
+}
+.sort {
+  grid-column: 2/5;
+  grid-row: 3/3;
+  height: 38px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sorting {
+text-transform: uppercase;
+font-family: "PT Sans", sans-seif;
+font-size: 13px;
+line-height: 18px;
+}
+.sort-list {
+list-style: none;
+display: flex;
+flex-direction: row;
+height: 38px;
+border: dashed 1px black;
+align-items: center;
+justify-content: space-between;
+}
+.sort-item a {
+font-family: "PT Sans", sans-seif;
+font-size: 13px;
+line-height: 18px;
+text-transform: uppercase;
+color: var(--black-text);
+opacity: 0.3;
+}
+
+.popular-items {
+grid-column: 2/5;
+grid-row: 4/6;
+
+}
+.catalog-list {
+  width: 
+}
+
 /*TEXT OF TITLE*/
 .popular {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  vertical-align: center;
+  vertical-align: middle;
   text-align: left;
   color: var(--basic-background-light-grey);
   font-style: normal;
@@ -301,32 +650,52 @@ background-color: var(--popular-background);
   color: var(--black-text);
 }
 .tools-list {
+  padding: 0;
   list-style: none;
-  margin-left: 130px;
-  margin-right: 130px;
+  margin:0 auto;
   margin-bottom: 70px;
+  margin-top: 20px;
+  /*width: 940px;*/
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
 }
 .tools-item {
   width: 220px;
   height: 318px;
   border: 1px solid #EAEAEA;
-  margin-right: 20px;
-  margin-left: 20px;
-  text-align: center;
   font-family: "PT Sans" sans-serif;
+  margin: 0;
+  /*padding-bottom: 21px;*/
+
+
+
+
   }
-s {
+.old-price {
 color: #A9A9A9;
 font-style: bold;
 font-size: 17px;
 line-height: 18px;
+margin-bottom: 13px;
 
 }
 .tools {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+  align-content: center;
+  border: dashed black 1px;
+  height: 318px;
+
 }
 .tools-text {
   font-size: 18px;
   line-height: 20px;
+  width: 170px;
+  text-align: center;
   
 }
 .price {
@@ -334,7 +703,16 @@ line-height: 18px;
   height: 38px;
   background-color: var(--basic-red);
   text-align: center;
-  margin: 0px 34px 21px 45px;
+  padding-top: 10px;
+  font-size: 17px;
+  line-height: 18px;
+  align-self: center;
+  box-sizing: border-box;
+
+
+
+
+    /*margin: 0px 34px 21px 45px;*/
   color: var(--white);
 }
 .new {
@@ -344,9 +722,13 @@ line-height: 18px;
 .manufacturer-list {
   list-style: none;
 }
-.manufacturer-item {
+.manufacturer-item {}
+
+
+
+
 /*SERVICE*/  
-}
+
 .service {
   background-color:var(--basic-background) ;
 }
