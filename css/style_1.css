@@ -1,0 +1,242 @@
+/*SLIDER*/
+
+.slider {
+ display: flex;
+ flex-direction: column;
+ 
+
+}
+.slider-button-conteiner {
+position: relative;
+z-index: 1;
+background-color: transparent;
+width: 620px;
+height: 162px;
+display: flex;
+justify-content: space-between;
+align-items: flex-start; 
+padding-top: 19px;
+box-sizing: border-box;
+
+
+}
+.button-left {
+margin-left: 25px;
+
+}
+.button-right {
+transform: rotate(180deg);
+margin-right: 25px;
+}
+.icon-right {
+
+}
+.slider-button {
+border: none;
+box-shadow: none;
+appearance: none;
+outline: 0;
+opacity: none;
+padding: 0;
+width: 23px;
+height: 41px;
+background: none;
+cursor: pointer;
+
+}
+
+.slider-img {
+position: absolute;
+z-index: 0;
+}
+
+
+
+.delivery {
+  background: var(--basic-background) url(C:/1360323-technomart-29/img/delivery-auto.png) no-repeat right 0%;
+  display: flex;
+  /*border: dashed black 1px;*/
+  margin-top: 70px;
+  align-items: flex-start;
+}
+
+.footer-list:nth-child(1) {
+  width: 550px;
+
+}
+
+/*CATALOG PAGE*/
+.page-catalog {
+display: grid;
+width: 940px;
+margin-left: auto;
+margin-right: auto;
+grid-template-columns: repeat(4, 220px); 
+grid-template-rows: auto auto auto;
+grid-gap: 20px;
+}
+.bread-crumb-list {
+/*list-style-image: url(C:/1360323-technomart-29/img/icon-right-small.svg);*/
+list-style: none;
+text-transform: uppercase;
+font-family: "PT Sans", sans-seif;
+font-size: 13px;
+line-height: 18px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0;
+width: 400px;
+height: 18px;
+border: dashed 1px black;
+}
+.bread-crumb-item {
+width: 100px;
+background: url(C:/1360323-technomart-29/img/icon-right-small.svg) no-repeat 80px center;
+
+}
+.bread-crumb-item:first-of-type {
+  list-style-image:none;
+  list-style-type: none;
+  background: url(C:/1360323-technomart-29/img/icon-right-small.svg) no-repeat 30px center;
+  width: 50px;
+}
+.bread-crumb-item:last-of-type {
+	background:none;
+}
+.bread-crumb-item:nth-child(3) {
+	background: url(C:/1360323-technomart-29/img/icon-right-small.svg) no-repeat 90px center;
+}
+
+.catalog-text {
+background-color: var(--popular-background-catalog);
+padding: 0 9px 0px 28px;
+grid-column: 1/5;
+height: 89px;
+display: flex;
+align-items: center;
+
+}
+.filter {
+grid-column: 1/1;
+grid-row: 3/7;
+
+
+}
+.sorting-filter {
+	background-color: var(--catalog-background);
+	width: 220px;
+	height: 38px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 18px;
+	box-sizing: border-box;
+}
+
+.sort {
+  grid-column: 2/5;
+  grid-row: 3/3;
+  height: 38px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  height: 38px;
+  background-color: var(--catalog-background);
+  padding-left: 20px;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+
+.sorting {
+text-transform: uppercase;
+font-family: "PT Sans", sans-seif;
+font-size: 13px;
+line-height: 18px;
+margin: 0;
+
+
+}
+.sort-list {
+list-style: none;
+padding: 0;
+display: flex;
+flex-direction: row;
+height: 38px;
+align-items: center;
+justify-content: space-between;
+width: 500px;
+}
+.sort-item a {
+font-family: "PT Sans", sans-seif;
+font-size: 13px;
+line-height: 18px;
+text-transform: uppercase;
+color: rgba(0, 0, 0, 0.3);
+border-bottom: 1px dotted var(--basic-red);
+}
+.sort-item a:hover {
+color: var(--black-text);
+border-bottom: 1px solid var(--basic-red);
+}
+.sort-item a:active {
+color: var(--basic-red);
+border: none;
+}
+
+.sort-item:last-child {
+display: flex;
+align-items: center;
+justify-content: space-between;
+	width: 60px;
+}
+.up-down {
+outline: none;
+border: none;
+background: none;
+cursor: pointer; 
+}
+
+/*SORT-ICON-BUTTON*/
+.icon-sort {
+	fill: var(--greylight-hover);
+}
+.icon-sort:hover {
+	fill: var(--black-text);
+}
+.icon-sort:active {
+	fill: var(--basic-red);
+}
+.up {
+	
+}
+.down {
+	transform: rotate(180deg);
+
+}
+/*CATALOG-ITEMS*/
+
+.catalog-items {
+grid-column: 2/5;
+grid-row: 4/6;
+margin: 0;
+
+
+}
+.catalog-list {
+  margin-top: 0;
+}
+
+.info-tool {
+height: 261px;
+background-color: var(--basic-background);
+}
+.perf-info {
+margin-top:64px;
+}
+.perf-info .page-text {
+margin-top:25px;
+}
