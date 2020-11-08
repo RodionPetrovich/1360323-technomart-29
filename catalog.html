@@ -87,9 +87,18 @@
   <fieldset class="filter-price">
     <legend class="filter-text"><label for="price-range">цена:</label></legend>
     <div class="price-range-area">
-      <input type="range" name="price-range" id="price-range" min="0" max="30000" step="100">
-      <output name="price-min" class="minimal">0</output> <em>-</em>
-      <output name="price-max" class="maxima">30000</output>
+      <div class="range-controls">
+         <div class="scale">
+              <div class="bar" style="width: 50%; margin-left:20% "></div>
+        </div>
+        <div class="toggle toggle-min" tabindex="0"></div>
+        <div class="toggle toggle-max" tabindex="0"></div>
+      </div>
+<div class="price-controls">
+  <label class="min-price">
+  <input type="number" name="min-price" value="0"></label>
+  <label class="max-price"><input type="number" name="max-price" value="30000"></label>
+</div>
     </div>
   </fieldset>
   <fieldset class="manufacturers">
