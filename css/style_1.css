@@ -72,14 +72,16 @@ width: 940px;
 margin-left: auto;
 margin-right: auto;
 grid-template-columns: repeat(4, 220px); 
-grid-template-rows: auto auto auto;
+grid-template-rows: auto auto auto auto;
 grid-gap: 20px;
+margin-top: 20px;
+font-family: "PT Sans", sans-serif;
 }
 .bread-crumb-list {
 /*list-style-image: url(C:/1360323-technomart-29/img/icon-right-small.svg);*/
 list-style: none;
 text-transform: uppercase;
-font-family: "PT Sans", sans-seif;
+font-family: "PT Sans", sans-serif;
 font-size: 13px;
 line-height: 18px;
 display: flex;
@@ -89,25 +91,32 @@ align-items: center;
 padding: 0;
 width: 400px;
 height: 18px;
-border: dashed 1px black;
+box-sizing: border-box;
+align-items: center;
 }
-.bread-crumb-item {
-width: 100px;
-background: url(C:/1360323-technomart-29/img/icon-right-small.svg) no-repeat 80px center;
+.bread-crumb-item::after {
+content: '';
+display: block;
+width: 15px; 
+height: 15px;
+margin: 0 20px;
+background: url(C:/1360323-technomart-29/img/icon-right-small.svg) no-repeat center;
+background-size: 65%;
 
 }
-.bread-crumb-item:first-of-type {
-  list-style-image:none;
-  list-style-type: none;
-  background: url(C:/1360323-technomart-29/img/icon-right-small.svg) no-repeat 30px center;
-  width: 50px;
+.bread-crumb-item {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+
 }
-.bread-crumb-item:last-of-type {
-	background:none;
+.bread-crumb-item:last-child:after {
+  display: none;
+  
 }
-.bread-crumb-item:nth-child(3) {
-	background: url(C:/1360323-technomart-29/img/icon-right-small.svg) no-repeat 90px center;
-}
+
+
 
 .catalog-text {
 background-color: var(--popular-background-catalog);
@@ -130,6 +139,11 @@ margin: 0;
   border: none;
   font-family: "PT Sans", sans-serif;
 }
+.filter-price {
+border-bottom: 1px solid var(--scale);
+height: 200px;
+}
+
 .filter-text {
 	font-size:17px;
 	line-height: 30px; 
@@ -218,9 +232,106 @@ padding-top: 9px;
 /*manufacturers*/
 
 .manufacturers {
-
+margin-top:16px;
+border-bottom: 1px solid var(--scale);
 }
 
+.manufacturers-name {
+font-size: 15px;
+line-height: 19px;
+font-weight: 400;
+text-transform: uppercase;
+
+}
+.filter-manufacturers, .filter-power  {
+list-style: none;
+padding: 0;
+margin: 0;
+margin-top: 16px;
+}
+.filter-option label {
+position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+.filter-option {
+margin-bottom: 19px;
+padding-left: 40px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;}
+
+.filter-input-checkbox + label::before {
+content: "";
+position: absolute;
+left: -40px;
+top: -5px;
+width: 23px;
+height: 23px;
+border: 2px solid var(--greylight-hover);
+border-radius: 3px;
+box-sizing: border-box;  
+}
+.filter-input-checkbox:checked + label::after {
+content: "";
+position: absolute;
+left: -37px;
+top: -4px;
+height: 17px;
+width: 23px;
+background: url(C:/1360323-technomart-29/img/Shape.svg) no-repeat center;
+background-size: 100%;
+z-index: 2;
+}
+
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label {
+
+}
+/*POWER*/
+
+.power {
+margin-top: 18px;
+height: 191px;
+box-sizing: border-box;
+}
+.filter-power {
+margin-top: 23px;
+
+}
+.filter-input-radio + label::before {
+	content:"";
+	position: absolute;
+	left: -40px;
+top: -5px;
+	width: 25px;
+	height: 25px;
+	border: 4px solid var(--greylight-hover);
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+.filter-input-radio:checked + label::after {
+	content:"";
+	position: absolute;
+	left: -32px;
+	top: 3px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	background-color: var(--greylight-hover);
+}
 
 
 
@@ -343,4 +454,64 @@ margin-top:64px;
 }
 .perf-info .page-text {
 margin-top:25px;
+}
+
+/*CATALOG-BUTTON*/
+.catalog-button {
+outline: none;
+border: 1px solid #E5E5E5;
+background-color: transparent;
+color: var(--black-text);
+height: 38px;
+text-transform: uppercase;
+font-size: 13px;
+line-height: 18px;
+font-family: inherit;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: stretch;
+box-sizing: border-box;
+border-radius: 3px;
+
+}
+.catalog-button:hover {
+border: 1px solid var(--greylight-hover);
+}
+.catalog-button:active {
+border: 1px solid var(--basic-red);	
+}
+.catalog-button:focus {
+background-color: var(--basic-red);	
+}
+
+
+.show-button {
+width: 220px;
+margin-top: 45px;
+}
+
+.number-list {
+list-style: none;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 0;
+width: 246px;
+align-self: start;
+justify-self: start;
+margin-top: 8px;
+margin-bottom: 59px;
+}
+.number-list li {
+margin-right: 10px;
+}
+.number-list a {
+color: var(--black-text);
+}
+.number-button {
+width: 38px;
+}
+.next-button {
+	width: 140px;
 }
