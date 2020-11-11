@@ -827,6 +827,10 @@
  .manufactur-link {
      width: 1px;
      height: 1px;
+     
+}
+.manufactur-link > img {
+     display: block;
 }
 /*SERVISE&DELIVERY*/
  .service-delivery {
@@ -1018,9 +1022,11 @@
  .footer-nav-link {
      color: var(--basic-background);
 }
- .footer-service:hover {
-     border-bottom: 1px solid var(--footer-service-text);
+ .footer-service {
      box-sizing: border-box;
+ }
+ .footer-service-link:hover {
+     border-bottom-color: var(--footer-service-text);    
 }
  .footer-service:active {
      border: none;
@@ -1028,6 +1034,7 @@
 }
  .footer-service-link {
      color: var(--footer-service-text);
+     border-bottom: 1px solid transparent;
 }
 /*INFORMATION ABOUT SITE&SOCIAL*/
  .info {
@@ -1070,10 +1077,22 @@
      display: flex;
      align-items: center;
      justify-content: center;
+     margin-left: 3px;
 }
  .social-item:hover,.social-item:active {
      background-color: var(--basic-red);
 }
+ .social-item > a {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+ }
+ .social-item > a > img {
+     width: 20px;
+     height: 20px;
+ }
  .academy-link {
      color: var(--footer-service-text);
 }
@@ -1188,7 +1207,6 @@
      background-color: var(--white);
      color: var(--basic-background-light-grey);
      border-radius: 2px;
-     box-shadow: #367315 3px;
      border: 3px solid var(--green);
      cursor: pointer;
 }
