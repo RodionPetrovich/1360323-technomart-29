@@ -17,7 +17,7 @@
 <div class="imput-wrapper"> 
     <input class="searching" type="search" name="search" id="poisk" placeholder="Поиск:">
 
-    <svg class="icon-search" width="" height="" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+    <svg class="icon-search" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
     </svg></div>
       </form>
@@ -81,7 +81,7 @@
               <li class="option-item">
                 <h3 class="option-text">Техника</h3><div class="option-button"><a href="#" >для стройки</a></div>
               </li>
-              <li class="option-item"><button class="all-button open-catalog"><a href="catalog.html">открыть каталог</a></button>
+              <li class="option-item"><div class="all-button open-catalog"><a href="catalog.html">открыть каталог</a></div>
 
                 <div class="perf slider none">
                   <img class="slider-img" src="img/man-perf.png" alt="Суровый дядька долбит стену бошем" width="620" height="266">
@@ -119,7 +119,7 @@
               
             <section class="popular-items">
               <div class="popular-text">
-            <h2 class="popular">Популярные товары:</h2><button type="button" class="all-button">все популярные товары</button>
+            <h2 class="popular">Популярные товары:</h2><a class="all-button">все популярные товары</a>
           </div>
 
           <ul class="main-page-list tools-list">
@@ -136,7 +136,7 @@
 
                 <li class="tools-item">
                   <div class="tools new">
-                    <div class="tools-img"><img src="img/BFG3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112"></div>
+                    <div class="tools-img"><img src="img/bfg-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112"></div>
                     <div class="tools-info">
                       <h3 class="tools-text">Перфоратор BOSCH BFG 3000</h3>
                       <s class="old-price">22500 Р.</s>
@@ -173,7 +173,7 @@
 
             <section class="conteiner popular-manufacturer">
               <div class="popular-text">
-                <h2 class="popular">Популярные производители</h2><button class="all-button">все производители</button>
+                <h2 class="popular">Популярные производители</h2><a class="all-button">все производители</a>
               </div>
               <ul class="manufacturer-list">
                 <li class="manufacturer-item"><a href="#" class="manufactur-link"><img src="img/bosch.jpg" alt="BOSCH" width="220" height="145"></a></li>
@@ -187,15 +187,16 @@
               </ul>
             </section>
             
-            <section class="service-delivery">         
-            <section class="conteiner service">
+            <section class="service-delivery">    
+              <h2 class="none">сервис и доставка</h2>     
+            <div class="conteiner service">
               
               <h2 class="popular black-text">сервисы</h2>
               <p class="page-text">Хороший интернет-магазин отличается от плохого не только ценами!<br>
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-            </section>
+            </div>
 
-            <section class="conteiner delivery">
+            <div class="conteiner delivery">
               <ul class="service-list">
                 <li class="service-item"><a href="#">
                   <h3>Доставка</h3>
@@ -214,7 +215,7 @@
                 Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!</p>
               </div>
-            </section>
+            </div>
             </section> 
             
             <div class="conteiner delivery-bar-contacts">
