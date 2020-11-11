@@ -13,12 +13,12 @@
 <header class="main-header">
 <div class="user-bar">
   <div class="conteiner user-bar-flex">
-    <div class="header-logo"><img class="logo-header" src="img/logo-technomart-text.svg" alt="Логотип магазина Техномарт"></div>
+    <div class="header-logo"><img class="logo-header" src="img/logo-technomart-text.svg"></div>
     <form action="#" method="post">
       <label for="poisk"></label>
 
       <div class="imput-wrapper"> 
-      <input class="searching" type="search" name="search" id="poisk" placeholder="Поиск:">
+      <input class="searching" type="search" name="search" id="poisk"placeholder="Поиск:">
 
       <svg class="icon-search" width="" height="" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
@@ -32,7 +32,7 @@
       </button>
       <button class="button-cart user-button">
         <img class="icon-cart" src="img/icon-cart.svg" alt="Корзина">Корзина: 0</button>
-        <div class="user-order"><button type="button" class="user-button user-link">Оформить заказ</button></div>
+        <div class="user-order"><button type="search" class="user-button user-link">Оформить заказ</button></div>
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@
       <div class="main-name"><h1 class="">Интернет-магазин <br>строительных материалов <br>и инструментов для ремонта</h1>
       </div>
       <div class="adress">
-        <div class="telephone"><a class="" href="tel:+78125550555"><img class="icon-phone" src="img/icon-phone.svg" alt="telephone" height="19">+7 (812) 555-05-55</a></div>
+        <div class="telephone"><a class="" href="tel:+78125550555"><img class="icon-phone" src="img/icon-phone.svg" alt="" height="19px">+7 (812) 555-05-55</a></div>
         <p class="page-text">г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
       </div>
       <section class="modal-user">
@@ -85,11 +85,9 @@
 <div class="catalog-text">
 <h1 class="popular">перфораторы</h1>
 </div>
-
-
 <section class="filter">
-  <div class="sorting-filter"><h2 class="sorting">фильтр:</h2></div>
-<form action="#" method="POST">
+<div class="sorting-filter"><h2 class="sorting">фильтр:</h2></div>
+<form action="#" method="POST" oninput="">
   <fieldset class="filter-price">
     <legend class="filter-text"><label for="price-range">цена:</label></legend>
     <div class="price-range-area">
@@ -122,7 +120,6 @@
     
     
   </fieldset>
-
   <fieldset class="power">
     <legend class="filter-text">питание:</legend>
   
@@ -131,12 +128,10 @@
     for="battery">Аккумуляторные</label></li>
     <li class="filter-option "><input class="visually-hidden filter-input-radio" type="radio" name="network" id="network"> <label class="manufacturers-name" for="network">сетевые</label></li>
   </ul>
-   <button class="catalog-button show-button">показать</button>
+ 
+  <button class="catalog-button show-button">показать</button>
   </fieldset>
-
-
 </section>
-
 <section class="sort">
 <h2 class="sorting">сортировка:</h2>
 <ul class="sort-list">
@@ -201,7 +196,7 @@
 
   <li class="tools-item">
     <div class="tools">
-      <div class="tools-img"><img class="" src="img/BFG3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112"></div>
+      <div class="tools-img"><img class="" src="img/BFG3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127px" height="112px"></div>
       <div class="tools-info">
       <h3 class="tools-text">Перфоратор BOSCH BFG 3000</h3>
       <s class="old-price">22500 Р.</s>
@@ -268,7 +263,7 @@
 </section>
 
 <ul class="number-list">
-<li><button class="catalog-button number-button active"><a href="#">1</a></button></li>
+<li><button class="catalog-button number-button"><a href="#">1</a></button></li>
 <li><button class="catalog-button number-button"><a href="#">2</a></button></li>
 <li><button class="catalog-button number-button"><a href="#">3</a></button></li>
 <li><button class="catalog-button next-button"><a href="#">следующая</a></button></li>
@@ -313,19 +308,19 @@
             <div class="social">
               <ul class="social-list">
                 <li class="social-item">
-                  <a href="https://vk.com/"> <img src="img/icon-vk.svg" alt="ссылка вконтакте"> </a>
+                  <a href="https://vk.com/"> <img src="img/icon-vk.svg"> </a>
                 </li>
                 <li class="social-item">
                   <a href="https://ru-ru.facebook.com/"> <img src="img/icon-fb.svg" alt="Фейсбук"> </a>
                 </li>
                 <li class="social-item">
-                  <a href="https://www.instagram.com/"> <img src="img/icon-insta.svg" alt="ссылка инстаграм"></a>
+                  <a href="https://www.instagram.com/"> <img src="img/icon-insta.svg"></a>
                 </li>
               </ul>
             </div>
             
             <p class="footer-text">Обратная связь: <br><a href="mailto:mail@htmlacademy.ru" class="academy-link">mail@htmlacademy.ru</a></p>
-            <p class="footer-text">Разработано — <br><a href="http://htmlacademy.ru/intensive/htmlcss" class="academy-link">htmlacademy.ru</a></p></div>
+            <p class="footer-text">Разработано — <br><a href="http://htmlacademy.ru" class="academy-link">htmlacademy.ru</a></p></div>
           </section>
         </footer>
       </body>
